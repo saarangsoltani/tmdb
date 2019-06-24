@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.16.0"
+    "axios-mock-adapter": "^1.16.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0"
   }
 }

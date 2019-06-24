@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {discoverSeries} from "../actions";
+import Poster from "../components/Poster";
 
 class Home extends React.Component {
 
@@ -11,11 +12,9 @@ class Home extends React.Component {
 
   seriesElements(series) {
     return series.map((s, i) => {
-      let baseUrl = `http://image.tmdb.org/t/p/w185/`;
-      let posterUrl = baseUrl + s.poster_path;
       return (
         <div className="movie-card" key={i}>
-          <img src={posterUrl} className="shadowed poster" alt="poster"/>;
+          <Poster path={s.poster_path} />
           <div className="card-info">
             <Link to={"/series/" + s.id}>{s.name}</Link>
           </div>
