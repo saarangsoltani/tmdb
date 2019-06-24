@@ -9,7 +9,12 @@ const apiMiddleware = ({ getState, dispatch }) => next => action => {
 
   const endpoint = action.payload.url;
   let url = [baseUrl, endpoint, apiKey].join("");
+  if (endpoint.includes("discover/tv")) {
+    let state = getState();
+    let sortKey = state.ui.selectedSortOrder;
 
+    url += `&sort_by=${sortKey}`;
+  }
   dispatch({ type: API_START });
   return axios
     .request({

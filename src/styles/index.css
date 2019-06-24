@@ -26,6 +26,12 @@ html *, body {
   position: relative;
 }
 
+/* ----discover page---- */
+
+.discover-header {
+  margin-top: -20px;
+}
+
 
 /* ----movie-grid ---- */
 

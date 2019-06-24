@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { discoverSeries } from "../actions";
 import LoadingSpinner from "../components/LoadingSpinner";
+import SortSelect from "../components/SortSelect";
 import Poster from "../components/Poster";
 
 class Home extends React.Component {
@@ -28,15 +29,23 @@ class Home extends React.Component {
     let discoveredSeriesElements = this.seriesElements(discovered.results);
     return (
       <section>
-        <div className="row">
-          {this.props.isLoading ? (
-            <div className="spinner-wrapper">
-              <LoadingSpinner />
-            </div>
-          ) : (
-            <div className="media-grid mt-20">{discoveredSeriesElements}</div>
-          )}
+      <div className="row discover-header">
+        <div className="col-sm-12 col-md-6 mb-20">
+
         </div>
+        <div className="col-sm-12 col-md-6 mb-20">
+          <SortSelect />
+        </div>
+      </div>
+      <div className="row">
+        {this.props.isLoading ? (
+          <div className="spinner-wrapper">
+            <LoadingSpinner />
+          </div>
+        ) : (
+          <div className="media-grid">{discoveredSeriesElements}</div>
+        )}
+      </div>
       </section>
     );
   }
