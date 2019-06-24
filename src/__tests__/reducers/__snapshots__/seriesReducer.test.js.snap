@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/series should set discovered series to series list 1`] = `
+Object {
+  "discovered": Object {
+    "page": 1,
+    "results": Array [
+      Object {
+        "name": "Friends",
+      },
+    ],
+    "total_pages": 1,
+    "total_results": 1,
+  },
+  "selectedSeries": Object {
+    "seasons": Array [],
+  },
+}
+`;

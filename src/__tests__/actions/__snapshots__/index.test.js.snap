@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/discover discoverSeries 1`] = `
+Object {
+  "payload": Object {
+    "onSuccess": [Function],
+    "url": "discover/tv",
+  },
+  "type": "api",
+}
+`;
+
+exports[`actions/discover setDiscoveredSeriesData 1`] = `
+Object {
+  "payload": "data",
+  "type": "set_series",
+}
+`;
