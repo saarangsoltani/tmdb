@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {discoverSeries} from "../actions";
+import { discoverSeries } from "../actions";
+import LoadingSpinner from "../components/LoadingSpinner";
 import Poster from "../components/Poster";
 
 class Home extends React.Component {
-
   componentDidMount() {
     this.props.discoverSeries();
   }
@@ -28,7 +28,15 @@ class Home extends React.Component {
     let discoveredSeriesElements = this.seriesElements(discovered.results);
     return (
       <section>
+        <div className="row">
+          {this.props.isLoading ? (
+            <div className="spinner-wrapper">
+              <LoadingSpinner />
+            </div>
+          ) : (
             <div className="media-grid mt-20">{discoveredSeriesElements}</div>
+          )}
+        </div>
       </section>
     );
   }
@@ -36,6 +44,8 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({
   discovered: state.series.discovered,
+  isLoading: state.ui.isLoading
+
 });
 const mapDispatchToProps = { discoverSeries };
 

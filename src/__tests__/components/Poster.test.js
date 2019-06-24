@@ -6,7 +6,7 @@ import Poster from "../../components/Poster";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe("Cell", () => {
+describe("Poster", () => {
   let props = { path: "gBGUL1UTUNmdRQT8gA1LUV4yg39.jpg" };
 
   it("Should render without errors", () => {

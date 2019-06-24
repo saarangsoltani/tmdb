@@ -46,6 +46,19 @@ html *, body {
   text-align: center;
 }
 
+/* ----spinner---- */
+.spinner-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+.spinner-large {
+  width: 5rem;
+  height: 5rem;
+}
+
+
 .movie-card .card-info {
   height: 4rem;
   font-size: 14px;
