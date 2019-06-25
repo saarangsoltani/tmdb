@@ -3,7 +3,10 @@ import {
   SET_DISCOVERED_SERIES,
   SORT_SERIES,
   FILTER_BY_GENRES,
-  SET_PAGINATION_PAGE
+  SET_PAGINATION_PAGE,
+  SET_SELECTED_SERIES,
+  ADD_FAVORITE_ITEM,
+  REMOVE_FAVORITE_ITEM
 } from "./types";
 
 export const discoverSeries = () => ({
@@ -45,3 +48,26 @@ export const setPaginationPage = page => {
     dispatch(discoverSeries());
   };
 };
+
+export const fetchSelectedSeries = tvSeriesId => ({
+  type: API,
+  payload: {
+    url: `tv/${tvSeriesId}`,
+    onSuccess: setSelectedSeries
+  }
+});
+
+export const setSelectedSeries = data => ({
+  type: SET_SELECTED_SERIES,
+  payload: data
+});
+
+export const addItemToFavorites = data => ({
+  type: ADD_FAVORITE_ITEM,
+  payload: data
+});
+
+export const removeItemFromFavorites = seriesId => ({
+  type: REMOVE_FAVORITE_ITEM,
+  payload: seriesId
+});

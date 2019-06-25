@@ -3,11 +3,13 @@ import { connectRouter } from "connected-react-router";
 import { seriesReducer } from "./seriesReducer";
 import { genresReducer } from "./genresReducer";
 import { uiReducer } from "./uiReducer";
+import { favoritesReducer } from "./favoritesReducer";
 
 export default history =>
   combineReducers({
     router: connectRouter(history),
     series: seriesReducer,
     genres: genresReducer,
-    ui: uiReducer
+    ui: uiReducer,
+    favorites: favoritesReducer
   });

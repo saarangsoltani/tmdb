@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { Route } from "react-router-dom";
 import { ConnectedRouter } from "connected-react-router";
+import * as moment from "moment";
 import store, { history } from "./store";
 import Home from "./pages/home";
+import Series from "./pages/series";
 import Logo from "./images/logo.png";
 import * as serviceWorker from "./serviceWorker";
 import "mini.css";
 import "./styles/index.css";
 import "./styles/helpers.css";
 
+moment.defaultFormat = "DD MMMM YYYY";
 const targetEl = document.getElementById("root");
 
 ReactDOM.render(
@@ -25,6 +28,7 @@ ReactDOM.render(
         <div className="col-lg-8  col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
           <main className="main-content">
             <Route exact path="/" component={Home} />
+            <Route exact path="/series/:id" component={Series} />
           </main>
         </div>
       </div>

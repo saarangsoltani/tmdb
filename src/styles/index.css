@@ -33,6 +33,24 @@ body {
   margin-top: -20px;
 }
 
+/* ----series-header----- */
+
+.series-header {
+  margin-top: -60px;
+}
+
+.series-header .heading {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  height: 60px;
+  color: #ffffff;
+}
+.series-header .extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 2fr));
+}
+
 /* ----movie-grid ---- */
 
 .media-grid {

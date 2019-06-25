@@ -5,6 +5,7 @@ import {createBrowserHistory} from "history";
 
 import apiMiddleware from "./middlewares/api";
 import createRootReducer from "./reducers";
+import { saveState } from "./localStorage";
 
 export const history = createBrowserHistory();
 
@@ -31,6 +32,8 @@ const store = createStore(
   composedEnhancers
 );
 
-window.store = store;
+store.subscribe(() => {
+  saveState("favorites", store.getState().favorites);
+});
 
 export default store;
