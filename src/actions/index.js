@@ -1,7 +1,8 @@
 import {
   API,
   SET_DISCOVERED_SERIES,
-  SORT_SERIES
+  SORT_SERIES,
+  FILTER_BY_GENRES
 } from "./types";
 
 export const discoverSeries = () => ({
@@ -23,6 +24,13 @@ export const sortSeries = sort_key => {
       type: SORT_SERIES,
       payload: sort_key
     });
+    dispatch(discoverSeries());
+  };
+};
+
+export const filterByGenres = genres => {
+  return dispatch => {
+    dispatch({ type: FILTER_BY_GENRES, payload: genres });
     dispatch(discoverSeries());
   };
 };
