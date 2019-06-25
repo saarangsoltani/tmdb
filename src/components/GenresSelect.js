@@ -1,11 +1,12 @@
 import React from "react";
 import Select from "react-select";
 import { connect } from "react-redux";
-import { filterByGenres } from "../actions";
+import { filterByGenres, setPaginationPage } from "../actions";
 
 class GenresSelect extends React.Component {
   handleChange = genres => {
     if (genres === null) genres = [];
+    this.props.setPaginationPage(1);
     this.props.filterByGenres(genres.map(g => g.value));
   };
 
@@ -34,5 +35,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { filterByGenres }
+  { filterByGenres, setPaginationPage }
 )(GenresSelect);

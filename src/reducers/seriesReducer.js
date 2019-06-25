@@ -1,6 +1,4 @@
-import {
-  SET_DISCOVERED_SERIES,
-} from "../actions/types";
+import { SET_DISCOVERED_SERIES, SET_PAGINATION_PAGE } from "../actions/types";
 
 let initialState = {
   selectedSeries: { seasons: [] },
@@ -11,6 +9,11 @@ export const seriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_DISCOVERED_SERIES:
       return Object.assign({}, state, { discovered: action.payload });
+    case SET_PAGINATION_PAGE:
+      return {
+        ...state,
+        discovered: { ...state.discovered, page: action.payload }
+      };
     default:
       return state;
   }

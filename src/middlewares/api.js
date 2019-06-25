@@ -10,10 +10,11 @@ const apiMiddleware = ({ getState, dispatch }) => next => action => {
   let url = [baseUrl, endpoint, apiKey].join("");
   if (endpoint.includes("discover/tv")) {
     let state = getState();
-    let sortKey = state.ui.selectedSortOrder;
-    let genres = state.ui.selectedGenres;
+    const sortKey = state.ui.selectedSortOrder;
+    const genres = state.ui.selectedGenres;
+    const page = state.series.discovered.page;
 
-    url += `&sort_by=${sortKey}`;
+    url += `&page=${page}&sort_by=${sortKey}`;
     if (genres.length) {
       url += `&with_genres=${genres.join()}`;
     }

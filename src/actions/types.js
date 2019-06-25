@@ -4,3 +4,4 @@ export const API_END = "api_end";
 export const SET_DISCOVERED_SERIES = "set_series";
 export const SORT_SERIES = "sort_series";
 export const FILTER_BY_GENRES = "filter_by_genres";
+export const SET_PAGINATION_PAGE = 'SET_PAGINATION_PAGE';
