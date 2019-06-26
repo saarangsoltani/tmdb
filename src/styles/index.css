@@ -27,6 +27,22 @@ body {
   position: relative;
 }
 
+/* ----actions bar---- */
+
+.actions {
+  position: absolute;
+  top: -3rem;
+  width: 100%;
+  color: white;
+}
+
+.actions .action-link {
+  color: #ffffff;
+  background: #4d1755;
+  padding: 3px;
+  border-radius: .5rem;
+}
+
 /* ----discover page---- */
 
 .discover-header {
