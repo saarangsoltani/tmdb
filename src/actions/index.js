@@ -6,7 +6,8 @@ import {
   SET_PAGINATION_PAGE,
   SET_SELECTED_SERIES,
   ADD_FAVORITE_ITEM,
-  REMOVE_FAVORITE_ITEM
+  REMOVE_FAVORITE_ITEM,
+  SET_SELECTED_SEASON
 } from "./types";
 
 export const discoverSeries = () => ({
@@ -70,4 +71,17 @@ export const addItemToFavorites = data => ({
 export const removeItemFromFavorites = seriesId => ({
   type: REMOVE_FAVORITE_ITEM,
   payload: seriesId
+});
+
+export const fetchSelectedSeason = (tvSeriesId, seasonNumber) => ({
+  type: API,
+  payload: {
+    url: `tv/${tvSeriesId}/season/${seasonNumber}`,
+    onSuccess: setSelectedSeason
+  }
+});
+
+export const setSelectedSeason = data => ({
+  type: SET_SELECTED_SEASON,
+  payload: data
 });

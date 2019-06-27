@@ -8,6 +8,7 @@ import store, { history } from "./store";
 import Home from "./pages/home";
 import Series from "./pages/series";
 import Favorites from "./pages/favorites";
+import Episodes from "./pages/episodes";
 import ActionsBar from "./components/ActionsBar";
 import Logo from "./images/logo.png";
 import * as serviceWorker from "./serviceWorker";
@@ -33,6 +34,11 @@ ReactDOM.render(
             <Route exact path="/" component={Home} />
             <Route exact path="/favorites" component={Favorites} />
             <Route exact path="/series/:id" component={Series} />
+            <Route
+              exact
+              path="/series/:id/episodes/:season_number"
+              component={Episodes}
+            />
           </main>
         </div>
       </div>

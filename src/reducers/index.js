@@ -4,6 +4,7 @@ import { seriesReducer } from "./seriesReducer";
 import { genresReducer } from "./genresReducer";
 import { uiReducer } from "./uiReducer";
 import { favoritesReducer } from "./favoritesReducer";
+import { seasonsReducer } from "./seasonsReducer";
 
 export default history =>
   combineReducers({
@@ -11,5 +12,6 @@ export default history =>
     series: seriesReducer,
     genres: genresReducer,
     ui: uiReducer,
-    favorites: favoritesReducer
+    favorites: favoritesReducer,
+    seasons: seasonsReducer
   });
