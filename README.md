@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Notes
+This is a responsive react+redux app that consumes tmdb API to allow the users discover, filter and sort TV series. You can access a live version at http://51.158.107.246/ . All pages are responsive for desktop, tablet and mobile screen sizes. Users can bookmark tv series and seasons and come back to them at a later time. The bookmarks are persisted in browser by localStorage. Test coverage is not ideal because of time constraints. 
+TMDB enforces rate restriction on api requests. In a real world scenario, API requests can proxied to a backend with an applicaiton level cache (redis, memcache etc). You can also have caching at HTTP server level, for instance with Varnish or at CDN level.
+
+<img src="https://i.paste.pics/95f66c9ef70073fbeabf171cb589bc59.png" width="450">
+<img src="https://i.paste.pics/a9fc6f4f54d7d48344e151db59eaab45.png" width="450">
+<img src="https://i.paste.pics/b5a12edfb1c8d7f3cef33720af32ad60.png" width="450">
+<img src="https://i.paste.pics/0d12488686a80b483c010e4fda93b284.png" width="250">
+<img src="https://i.paste.pics/6beed6cda3d2587aad0e9de87d19c5b8.png" width="450">
 
 ## Available Scripts
-
 In the project directory, you can run:
-
 ### `npm start`
-
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
 ### `npm test`
-
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
